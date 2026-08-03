@@ -1,0 +1,9 @@
+DumbosCode
+Copyright 2026
+
+Licensed under the Apache License, Version 2.0.
+
+The QR camera implementation is an original, simplified implementation informed
+by the Apache-2.0-licensed AOSP Settings/SettingsLib QR scanner architecture.
+ZXing is supplied by the Android source tree's external/zxing project and keeps
+its own license and NOTICE files.

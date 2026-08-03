@@ -1,0 +1,30 @@
+package {
+    default_applicable_licenses: ["DumbosCode_license"],
+}
+
+license {
+    name: "DumbosCode_license",
+    visibility: [":__subpackages__"],
+    license_kinds: ["SPDX-license-identifier-Apache-2.0"],
+    license_text: ["NOTICE"],
+}
+
+android_app {
+    name: "DumbosCode",
+
+    manifest: "AndroidManifest.xml",
+    srcs: ["src/**/*.java"],
+    resource_dirs: ["res"],
+
+    // This is an in-tree platform app and links against AOSP's zxing-core module.
+    platform_apis: true,
+    static_libs: ["zxing-core"],
+
+    min_sdk_version: "33",
+    target_sdk_version: "36",
+
+    // These do not bypass SELinux. They merely install/sign the app as a
+    // privileged platform component.
+    certificate: "platform",
+    privileged: true,
+}
