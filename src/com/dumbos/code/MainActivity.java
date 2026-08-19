@@ -47,6 +47,7 @@ public final class MainActivity extends Activity
      */
     private static final String[] SUBCOMMANDS = {
             "code",
+            "version",
             "ok",
             "get_name",
             "set_name",
@@ -178,10 +179,10 @@ public final class MainActivity extends Activity
     }
 
     private void runCommand(String code) {
-        if (code.isEmpty()) {
+        /*if (code.isEmpty()) {
             Toast.makeText(this, R.string.empty_code, Toast.LENGTH_SHORT).show();
             return;
-        }
+        }*/
 
         if (commandRunning) {
             Toast.makeText(this, R.string.already_running, Toast.LENGTH_SHORT).show();
