@@ -48,7 +48,6 @@ public final class MainActivity extends Activity
     private static final String[] SUBCOMMANDS = {
             "code",
             "version",
-            "set_name",
             "ok",
             "get_name",
             "set_name",
